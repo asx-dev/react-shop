@@ -1,7 +1,9 @@
+import NavMenu from "./components/NavMenu";
+
 function App() {
   return (
     <>
-      <h1>Hello World!!!</h1>
+      <NavMenu />
     </>
   );
 }
