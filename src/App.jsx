@@ -1,9 +1,8 @@
-import NavMenu from "./components/NavMenu";
-
+import Homepage from "./pages/Homepage";
 function App() {
   return (
     <>
-      <NavMenu />
+      <Homepage></Homepage>
     </>
   );
 }
