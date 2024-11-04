@@ -2,9 +2,9 @@ import { Card, Container, Row, Col, Button } from "react-bootstrap";
 const Products = () => {
   return (
     <Container className="pb-5">
-      <h2>Products</h2>
+      <h1 className="text-center text-lg-start"># Products</h1>
       <Row className="row-gap-4 pb-4">
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
@@ -20,7 +20,7 @@ const Products = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
@@ -36,7 +36,7 @@ const Products = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
@@ -52,7 +52,7 @@ const Products = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
@@ -68,7 +68,7 @@ const Products = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
@@ -84,7 +84,7 @@ const Products = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
@@ -100,7 +100,7 @@ const Products = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
@@ -116,7 +116,7 @@ const Products = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
               variant="top"
