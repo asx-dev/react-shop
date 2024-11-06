@@ -2,7 +2,9 @@ import { Card, Container, Row, Col, Button } from "react-bootstrap";
 const Products = () => {
   return (
     <Container className="pb-5">
-      <h1 className="text-center text-lg-start"># Products</h1>
+      <h1 className="text-center text-lg-start" id="products">
+        # Products
+      </h1>
       <Row className="row-gap-4 pb-4">
         <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
@@ -16,7 +18,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -32,7 +34,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -48,7 +50,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -64,7 +66,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -80,7 +82,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -96,7 +98,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -112,7 +114,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -128,7 +130,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy</Button>
             </Card.Body>
           </Card>
         </Col>
