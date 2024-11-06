@@ -1,11 +1,13 @@
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
+import { BsCart2, BsHeart } from "react-icons/bs";
+
 const Products = () => {
   return (
     <Container className="pb-5">
       <h1 className="text-center text-lg-start" id="products">
         # Products
       </h1>
-      <Row className="row-gap-4 pb-4">
+      <Row className="row-gap-3 pb-4">
         <Col md={6} lg={4}>
           <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
             <Card.Img
@@ -18,7 +20,22 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card content.
               </Card.Text>
-              <Button variant="primary">Buy</Button>
+              <div className="d-flex gap-2">
+                <Button
+                  variant="primary"
+                  className="d-flex align-items-center gap-1"
+                >
+                  <BsCart2 />
+                  Buy
+                </Button>
+                <Button
+                  variant="danger"
+                  className="d-flex align-items-center gap-1"
+                >
+                  <BsHeart />
+                  Save
+                </Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
