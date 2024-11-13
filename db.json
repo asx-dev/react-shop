@@ -1,0 +1,244 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Eco-Friendly Water Bottle",
+      "price": 24.99,
+      "description": "Reusable water bottle made from eco-friendly materials.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Online Coding Bootcamp",
+      "price": 299.99,
+      "description": "Comprehensive coding course for beginners.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "Mountain Biking Adventure",
+      "price": 99.99,
+      "description": "Guided mountain biking adventure with professional guide.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 4,
+      "name": "Ergonomic Office Chair",
+      "price": 149.99,
+      "description": "Comfortable chair designed to improve posture.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "name": "Virtual Personal Trainer",
+      "price": 59.99,
+      "description": "One-on-one virtual training session with a certified coach.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 6,
+      "name": "Gourmet Cooking Class",
+      "price": 89.99,
+      "description": "Learn to cook like a pro with this hands-on class.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 7,
+      "name": "Wireless Earbuds",
+      "price": 59.99,
+      "description": "High-quality wireless earbuds with noise cancellation.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 8,
+      "name": "Dog Walking Service",
+      "price": 19.99,
+      "description": "Professional dog walking service for your pet.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 9,
+      "name": "Wine Tasting Experience",
+      "price": 49.99,
+      "description": "Enjoy a curated selection of wines with an expert guide.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 10,
+      "name": "Noise-Canceling Headphones",
+      "price": 99.99,
+      "description": "Premium headphones for uninterrupted listening.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 11,
+      "name": "Personalized Yoga Class",
+      "price": 29.99,
+      "description": "One-hour personalized yoga session tailored to your needs.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 12,
+      "name": "Handmade Scented Candles",
+      "price": 14.99,
+      "description": "Soy-based candles with a range of soothing scents.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 13,
+      "name": "Guided City Tour",
+      "price": 39.99,
+      "description": "Explore the city's highlights with a professional guide.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 14,
+      "name": "Digital Art Workshop",
+      "price": 79.99,
+      "description": "Learn digital painting techniques in a guided workshop.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 15,
+      "name": "Laptop Stand",
+      "price": 29.99,
+      "description": "Ergonomic stand to improve laptop screen height.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 16,
+      "name": "Photography Course",
+      "price": 59.99,
+      "description": "Professional photography basics for beginners.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 17,
+      "name": "Fitness Tracker",
+      "price": 79.99,
+      "description": "Track your fitness with this multi-functional device.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 18,
+      "name": "Gardening Workshop",
+      "price": 49.99,
+      "description": "Learn basic gardening skills from professionals.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 19,
+      "name": "Portable Blender",
+      "price": 39.99,
+      "description": "Compact and portable blender for smoothies on-the-go.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 20,
+      "name": "Mindfulness App Subscription",
+      "price": 9.99,
+      "description": "Monthly subscription for guided meditations and exercises.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 21,
+      "name": "Cooking Utensil Set",
+      "price": 25.99,
+      "description": "Premium kitchen utensils for every chef.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 22,
+      "name": "Language Tutoring Session",
+      "price": 19.99,
+      "description": "One-hour session to improve your language skills.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 23,
+      "name": "VR Gaming Experience",
+      "price": 29.99,
+      "description": "Enjoy a full VR experience with the latest games.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 24,
+      "name": "Solar-Powered Charger",
+      "price": 44.99,
+      "description": "Portable charger powered by solar energy.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 25,
+      "name": "Aromatherapy Massage",
+      "price": 59.99,
+      "description": "One-hour massage with essential oils.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 26,
+      "name": "Pet Grooming Service",
+      "price": 34.99,
+      "description": "Professional pet grooming for cats and dogs.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 27,
+      "name": "Smart Home Starter Kit",
+      "price": 199.99,
+      "description": "Includes smart bulbs, outlets, and hub for home automation.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 28,
+      "name": "Craft Beer Tasting",
+      "price": 29.99,
+      "description": "Sample a variety of craft beers with guided tasting notes.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    },
+    {
+      "id": 29,
+      "name": "Online Therapy Session",
+      "price": 49.99,
+      "description": "One-hour virtual therapy session with a licensed therapist.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": false
+    },
+    {
+      "id": 30,
+      "name": "Weekly Meal Kit",
+      "price": 79.99,
+      "description": "Pre-prepped ingredients and recipes for healthy meals.",
+      "image": "https://picsum.photos/300/300",
+      "inStock": true
+    }
+  ]
+}
