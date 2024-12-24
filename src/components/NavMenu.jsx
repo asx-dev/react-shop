@@ -15,12 +15,15 @@ function NavMenu() {
             <Nav.Link href="#home" className="text-light">
               Home
             </Nav.Link>
+
             <Nav.Link href="#products" className="text-light">
               Products
             </Nav.Link>
+
             <Nav.Link href="#products" className="text-light">
               Favorites
             </Nav.Link>
+
             <Nav.Link href="#cart" className="text-light">
               Cart
             </Nav.Link>
