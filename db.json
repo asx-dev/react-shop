@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Eco-Friendly Water Bottle",
       "price": 24.99,
-      "description": "Reusable water bottle made from eco-friendly materials.",
+      "description": "Reusable water bottle made from eco-friendly materials. At least the first product neesa to trigger the error handler.",
       "image": "https://picsum.photos/300/300",
       "inStock": true
     },

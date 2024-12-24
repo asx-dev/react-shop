@@ -27,7 +27,7 @@ const Products = () => {
   return (
     <Container className="pb-5">
       <h1 className="text-center text-lg-start" id="products">
-        # Products
+        Products
       </h1>
       <Row className="row-gap-3 pb-4">
         {productList.map((product) => {
@@ -44,29 +44,37 @@ const Products = () => {
                   height={300}
                 />
                 <Card.Body>
-                  <Card.Title>{product.name}</Card.Title>
-                  <Card.Text>{product.description}</Card.Text>
-                  <div className="d-flex gap-1">
-                    <Button
-                      variant="primary"
-                      className="d-flex align-items-center gap-1"
-                    >
-                      <BsCart2 />
-                      Buy
-                    </Button>
-                    <Button
-                      variant="danger"
-                      className="d-flex align-items-center gap-1"
-                    >
-                      <BsHeart />
-                      Save
-                    </Button>
-                    <Button
-                      variant="success"
-                      className="d-flex align-items-center gap-1"
-                    >
-                      {product.price} $
-                    </Button>
+                  <Card.Title>
+                    {product.name.length > 23
+                      ? product.name.slice(0, 20) + "..."
+                      : product.name}
+                  </Card.Title>
+                  <Card.Text>
+                    {" "}
+                    {product.description.length > 60
+                      ? product.description.slice(0, 60) + "..."
+                      : product.description}
+                  </Card.Text>
+                  <div className="d-flex align-items-center justify-content-between">
+                    <div className="d-flex gap-1">
+                      <Button
+                        variant="primary"
+                        className="d-flex align-items-center gap-1"
+                      >
+                        <BsCart2 />
+                        Buy
+                      </Button>
+                      <Button
+                        variant="danger"
+                        className="d-flex align-items-center gap-1"
+                      >
+                        <BsHeart />
+                        Save
+                      </Button>
+                    </div>
+                    <p className="m-0 fs-5">
+                      <b>{product.price}$</b>
+                    </p>
                   </div>
                 </Card.Body>
               </Card>
