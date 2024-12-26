@@ -3,10 +3,10 @@ import Products from "../components/Products";
 
 const Homepage = () => {
   return (
-    <>
+    <div className="mt-2 py-5">
       <Slider />
       <Products />
-    </>
+    </div>
   );
 };
 

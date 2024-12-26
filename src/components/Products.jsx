@@ -1,13 +1,33 @@
-import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import { BsCart2, BsHeart } from "react-icons/bs";
 import { useState, useEffect } from "react";
+import { Pagination } from "react-bootstrap";
+import ProductCard from "../components/ProductCard";
 
 const Products = () => {
   const [productList, setProductList] = useState([]);
+
+  // Pagination --------------------------------
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
+  const totalPages = Math.ceil(productList.length / itemsPerPage);
+  let items = [];
+  const lastItem = currentPage * itemsPerPage;
+  const firstItem = lastItem - itemsPerPage;
+  const currentItems = productList.slice(firstItem, lastItem);
+
+  for (let number = 1; number <= totalPages; number++) {
+    items.push(
+      <Pagination.Item
+        key={number}
+        active={number === currentPage}
+        onClick={() => setCurrentPage(number)}
+      >
+        {number}
+      </Pagination.Item>
+    );
+  }
+  // ----------------------------------------------------------------
 
   useEffect(() => {
     let isMounted = true;
@@ -25,63 +45,16 @@ const Products = () => {
   }, []);
 
   return (
-    <Container className="pb-5">
+    <Container>
       <h1 className="text-center text-lg-start" id="products">
         Products
       </h1>
-      <Row className="row-gap-3 pb-4">
-        {productList.map((product) => {
-          return (
-            <Col md={6} lg={4} key={product.id}>
-              <Card
-                style={{ width: "18rem" }}
-                className="shadow mx-auto mx-md-0"
-              >
-                <Card.Img
-                  variant="top"
-                  src={product.image}
-                  width={300}
-                  height={300}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    {product.name.length > 23
-                      ? product.name.slice(0, 20) + "..."
-                      : product.name}
-                  </Card.Title>
-                  <Card.Text>
-                    {" "}
-                    {product.description.length > 60
-                      ? product.description.slice(0, 60) + "..."
-                      : product.description}
-                  </Card.Text>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <div className="d-flex gap-1">
-                      <Button
-                        variant="primary"
-                        className="d-flex align-items-center gap-1"
-                      >
-                        <BsCart2 />
-                        Buy
-                      </Button>
-                      <Button
-                        variant="danger"
-                        className="d-flex align-items-center gap-1"
-                      >
-                        <BsHeart />
-                        Save
-                      </Button>
-                    </div>
-                    <p className="m-0 fs-5">
-                      <b>{product.price}$</b>
-                    </p>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          );
+      <Row className="row-gap-3">
+        {currentItems.map((product) => {
+          return <ProductCard key={product.id} product={product} />;
         })}
       </Row>
+      <Pagination className="mt-4">{items}</Pagination>
     </Container>
   );
 };
