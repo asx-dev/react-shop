@@ -2,7 +2,17 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { BsCart2, BsHeart } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cart/cartSlice";
+import { toast } from "react-toastify";
 const ProductCard = ({ product }) => {
+  const dispatch = useDispatch();
+
+  const addProductToCart = () => {
+    dispatch(addToCart({ name: product.name, price: product.price }));
+    toast.success(`Product added to cart!`);
+  };
+
   return (
     <Col
       md={6}
@@ -29,6 +39,7 @@ const ProductCard = ({ product }) => {
               <Button
                 variant="primary"
                 className="d-flex align-items-center gap-1"
+                onClick={addProductToCart}
               >
                 <BsCart2 />
                 Buy

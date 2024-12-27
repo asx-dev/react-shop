@@ -9,6 +9,8 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router";
+import { store } from "./app/store";
+import { Provider } from "react-redux";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -19,7 +21,11 @@ function App() {
       </Route>
     )
   );
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />;
+    </Provider>
+  );
 }
 
 export default App;
