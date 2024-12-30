@@ -1,4 +1,5 @@
-import { Carousel, Image } from "react-bootstrap";
+import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 const Slider = () => {
   return (
     <>

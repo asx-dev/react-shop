@@ -3,3 +3,8 @@
     max-width: 960px !important;
   }
 }
+.navbar-custom {
+  background-color: rgba(214, 213, 213, 0.685);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+}
