@@ -1,8 +1,12 @@
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
+import { useDispatch } from "react-redux";
+import { toggleCart } from "../features/cart/cartSlice";
 import { NavLink } from "react-router";
+import Container from "react-bootstrap/Container";
 function NavMenu() {
+  const dispatch = useDispatch();
   return (
     <Navbar expand="lg" fixed="top" bg="primary">
       <Container>
@@ -24,7 +28,7 @@ function NavMenu() {
               Favorites
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/cart">
+            <Nav.Link as={Button} onClick={() => dispatch(toggleCart())}>
               Cart
             </Nav.Link>
           </Nav>

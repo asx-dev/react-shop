@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
       className="d-flex justify-content-center"
     >
       <Card style={{ width: "18rem" }} className="shadow mx-auto mx-md-0">
-        <Card.Img variant="top" src={product.image} width={300} height={200} />
+        <Card.Img variant="top" src={product.image} width={300} height={300} />
         <Card.Body>
           <Card.Title>
             {product.name.length > 23
