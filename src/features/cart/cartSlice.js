@@ -4,7 +4,7 @@ const initialState = {
   value: [],
   isOpen: false,
 };
-
+// TODO: Solve Cart problem when adding same podructs to cart (Map?, Immutable methods?)
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -14,9 +14,9 @@ export const cartSlice = createSlice({
         ? (state.value = [action.payload])
         : (state.value = [...state.value, action.payload]);
     },
-    removeFromCart: (state, action) => [
-      state.value.filter((item) => item.name !== action.payload.name),
-    ],
+    removeFromCart: (state, action) => {
+      state.value = state.value.filter((item) => item.name !== action.payload);
+    },
     toggleCart: (state) => {
       state.isOpen = !state.isOpen;
     },

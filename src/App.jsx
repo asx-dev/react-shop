@@ -1,6 +1,5 @@
 import Homepage from "./pages/Homepage";
 import Favorites from "./pages/Favorites";
-import Cart from "./pages/Cart";
 import MainLayout from "../src/layouts/MainLayout";
 import "./styles.css";
 import {
@@ -17,7 +16,6 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Homepage />} />
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/cart" element={<Cart />} />
       </Route>
     )
   );
