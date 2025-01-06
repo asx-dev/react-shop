@@ -3,13 +3,14 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../features/cart/cartSlice";
+import { addToCart, saveCartToStorage } from "../features/cart/cartSlice";
 import { toast } from "react-toastify";
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
 
   const addProductToCart = () => {
     dispatch(addToCart({ name: product.name, price: product.price, qty: 1 }));
+    dispatch(saveCartToStorage());
     toast.success(`Product added to cart!`, {
       position: "bottom-right",
       theme: "dark",

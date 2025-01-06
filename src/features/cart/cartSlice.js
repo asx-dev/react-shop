@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+// TODO: Solve the problem loading the local storage items
+const cartCache = localStorage.getItem("cart");
+console.log(cartCache);
 const initialState = {
-  value: [],
+  value: cartCache ? [...cartCache] : [],
   isOpen: false,
 };
 
@@ -40,11 +42,15 @@ export const cartSlice = createSlice({
         );
       }
     },
+    saveCartToStorage: (state) => {
+      localStorage.setItem("cart", JSON.stringify(state.value));
+    },
     toggleCart: (state) => {
       state.isOpen = !state.isOpen;
     },
   },
 });
 
-export const { addToCart, removeFromCart, toggleCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, toggleCart, saveCartToStorage } =
+  cartSlice.actions;
 export default cartSlice.reducer;

@@ -1,11 +1,20 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleCart, removeFromCart } from "../features/cart/cartSlice";
+import {
+  toggleCart,
+  removeFromCart,
+  saveCartToStorage,
+} from "../features/cart/cartSlice";
 import { BsCartX } from "react-icons/bs";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
+  const removeProductFromCart = (name) => {
+    dispatch(removeFromCart(name));
+    dispatch(saveCartToStorage());
+  };
 
   return (
     <Offcanvas
@@ -33,7 +42,7 @@ const Cart = () => {
               </div>
               <Button
                 variant="danger"
-                onClick={() => dispatch(removeFromCart(item.name))}
+                onClick={() => removeProductFromCart(item.name)}
               >
                 <BsCartX />
               </Button>
