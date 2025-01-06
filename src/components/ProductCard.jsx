@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
 
   const addProductToCart = () => {
-    dispatch(addToCart({ name: product.name, price: product.price }));
+    dispatch(addToCart({ name: product.name, price: product.price, qty: 1 }));
     toast.success(`Product added to cart!`, {
       position: "bottom-right",
       theme: "dark",

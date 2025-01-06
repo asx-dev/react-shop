@@ -4,18 +4,41 @@ const initialState = {
   value: [],
   isOpen: false,
 };
-// TODO: Solve Cart problem when adding same podructs to cart (Map?, Immutable methods?)
+
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      state.value.length === 0
-        ? (state.value = [action.payload])
-        : (state.value = [...state.value, action.payload]);
+      // The cart is empty
+      if (state.value.length === 0) {
+        state.value = [action.payload];
+        return;
+      }
+      // The cart already contains the product
+      if (state.value.some((value) => value.name === action.payload.name)) {
+        state.value = state.value.map((item) => {
+          return item.name === action.payload.name
+            ? { ...item, qty: item.qty + 1 }
+            : item;
+        });
+      } else {
+        // Save the new product
+        state.value = [...state.value, action.payload];
+      }
     },
     removeFromCart: (state, action) => {
-      state.value = state.value.filter((item) => item.name !== action.payload);
+      state.value = state.value.map((item) => {
+        return item.name === action.payload
+          ? { ...item, qty: item.qty - 1 }
+          : item;
+      });
+
+      if (state.value.find((item) => item.qty === 0)) {
+        state.value = state.value.filter(
+          (item) => item.name !== action.payload
+        );
+      }
     },
     toggleCart: (state) => {
       state.isOpen = !state.isOpen;

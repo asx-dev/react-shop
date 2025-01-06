@@ -26,7 +26,11 @@ const Cart = () => {
               key={item.name}
               className="shadow-sm p-3 d-flex justify-content-between align-items-center rounded mb-1"
             >
-              {item.name} - {item.price}$
+              <div className="d-dlex flex-row gap-1">
+                <strong>{item.name}</strong>
+                <p className="m-0">Items: {item.qty}</p>
+                <p className="m-0">Price: {item.price}$</p>
+              </div>
               <Button
                 variant="danger"
                 onClick={() => dispatch(removeFromCart(item.name))}
