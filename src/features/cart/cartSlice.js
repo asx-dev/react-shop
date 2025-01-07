@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-// TODO: Solve the problem loading the local storage items
+
 const cartCache = localStorage.getItem("cart");
-console.log(cartCache);
 const initialState = {
-  value: cartCache ? [...cartCache] : [],
+  value: cartCache ? JSON.parse(cartCache) : [],
   isOpen: false,
 };
 
@@ -12,12 +11,10 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      // The cart is empty
       if (state.value.length === 0) {
         state.value = [action.payload];
         return;
       }
-      // The cart already contains the product
       if (state.value.some((value) => value.name === action.payload.name)) {
         state.value = state.value.map((item) => {
           return item.name === action.payload.name
@@ -25,7 +22,6 @@ export const cartSlice = createSlice({
             : item;
         });
       } else {
-        // Save the new product
         state.value = [...state.value, action.payload];
       }
     },
