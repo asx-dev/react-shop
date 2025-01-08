@@ -9,7 +9,7 @@ const Products = () => {
   const [isLoading, setIsLoading] = useState(true);
   // Pagination --------------------------------
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 12;
   const totalPages = Math.ceil(productList.length / itemsPerPage);
   let items = [];
   const lastItem = currentPage * itemsPerPage;

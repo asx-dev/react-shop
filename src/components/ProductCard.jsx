@@ -23,11 +23,14 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Col md={6} lg={4} key={product.id}>
+    <Col xs={6} sm={4} md={3} lg={2} key={product.id}>
       <div className="d-flex flex-column align-items-center align-items-md-start gap-1">
-        {/* TODO: Review product card design centering and product-image-container class */}
         <div className="position-relative product-image-container">
-          <Image src={product.image} rounded className="shadow-sm" />
+          <Image
+            src={product.image}
+            rounded
+            className="shadow-sm product-image"
+          />
           <Button
             variant="outline-primary"
             className="d-flex align-items-center gap-1 position-absolute bottom-0 end-0 m-1"
