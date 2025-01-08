@@ -47,7 +47,7 @@ const Products = () => {
   }, []);
 
   return (
-    <Container>
+    <>
       <h1 className="text-center text-lg-start mb-2" id="products">
         Products
       </h1>
@@ -58,7 +58,7 @@ const Products = () => {
         })}
       </Row>
       <Pagination className="mt-4">{items}</Pagination>
-    </Container>
+    </>
   );
 };
 

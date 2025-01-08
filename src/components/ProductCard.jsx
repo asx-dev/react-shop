@@ -1,7 +1,5 @@
-import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { BsFillHeartFill, BsCartPlusFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { addToCart, saveCartToStorage } from "../features/cart/cartSlice";
