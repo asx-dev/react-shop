@@ -1,13 +1,12 @@
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useState, useEffect } from "react";
 import Pagination from "react-bootstrap/Pagination";
 import ProductCard from "../components/ProductCard";
 import Loader from "../components/Loader";
+import Categories from "./Categories";
 const Products = () => {
   const [productList, setProductList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  // Pagination --------------------------------
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   const totalPages = Math.ceil(productList.length / itemsPerPage);
@@ -27,7 +26,6 @@ const Products = () => {
       </Pagination.Item>
     );
   }
-  // ----------------------------------------------------------------
 
   useEffect(() => {
     let isMounted = true;
@@ -48,9 +46,15 @@ const Products = () => {
 
   return (
     <>
-      <h1 className="text-center text-lg-start mb-2" id="products">
+      {/* FIXME: This component is not loading the producstList on time but the filter is working */}
+      <Categories
+        products={productList}
+        setProductList={setProductList}
+        isLoading={isLoading}
+      />
+      <h2 className="text-center text-lg-start mb-2" id="products">
         Products
-      </h1>
+      </h2>
       {isLoading && <Loader />}
       <Row className="row-gap-3">
         {currentItems.map((product) => {
