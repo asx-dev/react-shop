@@ -2,8 +2,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import { useState } from "react";
-const Categories = ({ products, setProductList, isLoading }) => {
-  const [originalProducts, setOriginalProducts] = useState([]);
+const Categories = ({ products, setProductList }) => {
+  const [originalProducts] = useState(products?.length ? products : []);
   const categories = [
     { name: "All", id: 1 },
     { name: "Technology", id: 2 },
@@ -12,11 +12,7 @@ const Categories = ({ products, setProductList, isLoading }) => {
     { name: "Music", id: 5 },
     { name: "Games", id: 6 },
   ];
-  // TODO: Use the isLoading propmt to set the original products
-  if (isLoading === false) setOriginalProducts(products);
-
   const handleCategoryClick = (category) => {
-    console.log(originalProducts);
     if (category === "All") {
       setProductList(originalProducts);
     } else {

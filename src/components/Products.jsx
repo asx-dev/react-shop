@@ -46,22 +46,22 @@ const Products = () => {
 
   return (
     <>
-      {/* FIXME: This component is not loading the producstList on time but the filter is working */}
-      <Categories
-        products={productList}
-        setProductList={setProductList}
-        isLoading={isLoading}
-      />
-      <h2 className="text-center text-lg-start mb-2" id="products">
-        Products
-      </h2>
-      {isLoading && <Loader />}
-      <Row className="row-gap-3">
-        {currentItems.map((product) => {
-          return <ProductCard key={product.id} product={product} />;
-        })}
-      </Row>
-      <Pagination className="mt-4">{items}</Pagination>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Categories products={productList} setProductList={setProductList} />
+          <h2 className="text-center text-lg-start mb-2" id="products">
+            Products
+          </h2>
+          <Row className="row-gap-3">
+            {currentItems.map((product) => {
+              return <ProductCard key={product.id} product={product} />;
+            })}
+          </Row>
+          <Pagination className="mt-4">{items}</Pagination>
+        </>
+      )}
     </>
   );
 };
