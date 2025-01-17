@@ -7,6 +7,7 @@ import Categories from "./Categories";
 const Products = () => {
   const [productList, setProductList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   const totalPages = Math.ceil(productList.length / itemsPerPage);
@@ -14,7 +15,6 @@ const Products = () => {
   const lastItem = currentPage * itemsPerPage;
   const firstItem = lastItem - itemsPerPage;
   const currentItems = productList.slice(firstItem, lastItem);
-
   for (let number = 1; number <= totalPages; number++) {
     items.push(
       <Pagination.Item
@@ -26,6 +26,8 @@ const Products = () => {
       </Pagination.Item>
     );
   }
+
+  // TODO: Implement filtering use one variable that doesn't change and another variable called filtered products. Try implement here all the logic.
 
   useEffect(() => {
     let isMounted = true;

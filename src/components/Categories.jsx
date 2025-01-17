@@ -4,6 +4,9 @@ import Image from "react-bootstrap/Image";
 import { useState } from "react";
 const Categories = ({ products, setProductList }) => {
   const [originalProducts] = useState(products?.length ? products : []);
+
+  console.log(originalProducts);
+
   const categories = [
     { name: "All", id: 1 },
     { name: "Technology", id: 2 },
