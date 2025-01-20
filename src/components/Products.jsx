@@ -5,9 +5,11 @@ import Image from "react-bootstrap/Image";
 import ProductCard from "../components/ProductCard";
 import Loader from "../components/Loader";
 import { useState, useEffect } from "react";
+import useFetch from "../hooks/useFetch";
 const Products = () => {
+  const API_URL = "http://localhost:3000/products";
+  const { data, isLoading } = useFetch(API_URL);
   const [productList, setProductList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [filteredItems, setFilteredItems] = useState([]);
 
   // TODO: Pagination refactor into a separate component
@@ -50,25 +52,11 @@ const Products = () => {
   };
 
   useEffect(() => {
-    // TODO: Create a custom hook function that fetch the data
-    let isMounted = true;
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/products");
-        const data = await response.json();
-        if (isMounted) {
-          setProductList(data);
-          setFilteredItems(data);
-        }
-      } catch (error) {
-        if (isMounted) console.error("Error fetching products:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchProducts();
-    return () => (isMounted = false);
-  }, []);
+    if (data) {
+      setProductList(data);
+      setFilteredItems(data);
+    }
+  }, [data]);
 
   if (isLoading) return <Loader />;
 

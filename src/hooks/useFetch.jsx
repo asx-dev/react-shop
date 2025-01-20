@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     let mounted = true;
     const fetchData = async () => {
@@ -11,6 +12,8 @@ const useFetch = (url) => {
         setData(response);
       } catch (error) {
         console.log(error);
+      } finally {
+        setIsLoading(false);
       }
     };
     if (mounted) {
@@ -21,7 +24,7 @@ const useFetch = (url) => {
     };
   }, [url]);
 
-  return data;
+  return { data, isLoading };
 };
 
 export default useFetch;
