@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard";
 import Loader from "../components/Loader";
 import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
+import Categories from "../components/Categories";
 const Products = () => {
   const API_URL = "http://localhost:3000/products";
   const { data, isLoading } = useFetch(API_URL);
@@ -32,15 +33,15 @@ const Products = () => {
     );
   }
   // TODO: Categories refator into a separate component
-  const categories = [
-    { name: "All", id: 1 },
-    { name: "Technology", id: 2 },
-    { name: "Cars", id: 3 },
-    { name: "Audio", id: 4 },
-    { name: "Music", id: 5 },
-    { name: "Games", id: 6 },
-  ];
-  const handleCategoryClick = (category) => {
+  // const categories = [
+  //   { name: "All", id: 1 },
+  //   { name: "Technology", id: 2 },
+  //   { name: "Cars", id: 3 },
+  //   { name: "Audio", id: 4 },
+  //   { name: "Music", id: 5 },
+  //   { name: "Games", id: 6 },
+  // ];
+  const handleCategory = (category) => {
     if (category === "All") {
       setFilteredItems(productList);
     } else {
@@ -65,7 +66,7 @@ const Products = () => {
       <h2 className="text-center text-lg-start mb-2" id="categories">
         Categories
       </h2>
-      <Row>
+      {/* <Row>
         {categories.map((category) => {
           return (
             <Col
@@ -85,7 +86,8 @@ const Products = () => {
             </Col>
           );
         })}
-      </Row>
+      </Row> */}
+      <Categories onCategoryClick={handleCategory} />
       <h2 className="text-center text-lg-start mb-2" id="products">
         Products
       </h2>
