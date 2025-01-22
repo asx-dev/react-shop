@@ -1,7 +1,8 @@
+import Container from "react-bootstrap/Container";
 import Slider from "../components/Slider";
 import Products from "../components/Products";
 import CallToAction from "../components/CallToAction";
-import Container from "react-bootstrap/Container";
+import Footer from "../components/Footer";
 const Homepage = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const Homepage = () => {
         <Products />
         <CallToAction />
       </Container>
+      <Footer />
     </>
   );
 };
