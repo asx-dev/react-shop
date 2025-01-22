@@ -1,5 +1,6 @@
 import Row from "react-bootstrap/Row";
 import useFetch from "../hooks/useFetch";
+import usePagination from "../hooks/usePagination";
 import ProductCard from "../components/ProductCard";
 import Loader from "../components/Loader";
 import Categories from "../components/Categories";
@@ -10,13 +11,11 @@ const Products = () => {
   const { data, isLoading } = useFetch(API_URL);
   const [productList, setProductList] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
-  // TODO: Review if the code can be refactored more
-  const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
-  const lastItem = currentPage * itemsPerPage;
-  const firstItem = lastItem - itemsPerPage;
-  const currentItems = filteredItems.slice(firstItem, lastItem);
+  const { totalPages, currentItems } = usePagination(
+    filteredItems,
+    currentPage
+  );
 
   const handleCategory = (category) => {
     if (category === "All") {
