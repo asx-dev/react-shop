@@ -17,17 +17,6 @@ const Products = () => {
     currentPage
   );
 
-  const handleCategory = (category) => {
-    if (category === "All") {
-      setFilteredItems(productList);
-    } else {
-      const updatedProductList = productList.filter(
-        (item) => item.category === category
-      );
-      setFilteredItems(updatedProductList);
-    }
-  };
-
   useEffect(() => {
     if (data) {
       setProductList(data);
@@ -42,7 +31,10 @@ const Products = () => {
       <h2 className="text-center text-lg-start mb-2" id="categories">
         Categories
       </h2>
-      <Categories onCategoryClick={handleCategory} />
+      <Categories
+        originalProducts={productList}
+        onFilterChange={setFilteredItems}
+      />
       <h2 className="text-center text-lg-start mb-2" id="products">
         Products
       </h2>

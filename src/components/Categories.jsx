@@ -1,7 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-const Categories = ({ onCategoryClick }) => {
+const Categories = ({ originalProducts, onFilterChange }) => {
   const categories = [
     { name: "All", id: 1 },
     { name: "Technology", id: 2 },
@@ -10,6 +10,17 @@ const Categories = ({ onCategoryClick }) => {
     { name: "Music", id: 5 },
     { name: "Games", id: 6 },
   ];
+
+  const handleCategory = (category) => {
+    if (category === "All") {
+      onFilterChange(originalProducts);
+    } else {
+      const updatedProductList = originalProducts.filter(
+        (item) => item.category === category
+      );
+      onFilterChange(updatedProductList);
+    }
+  };
 
   return (
     <Row>
@@ -21,7 +32,7 @@ const Categories = ({ onCategoryClick }) => {
             md={2}
             lg={2}
             key={category.id}
-            onClick={() => onCategoryClick(category.name)}
+            onClick={() => handleCategory(category.name)}
           >
             <Image
               src="https://picsum.photos/300/300"
