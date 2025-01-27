@@ -23,7 +23,7 @@ function NavMenu() {
               Products
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/favorites">
+            <Nav.Link as={NavLink} to="/bookmarks">
               Favorites
             </Nav.Link>
 

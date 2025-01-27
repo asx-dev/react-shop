@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
   };
 
   const addProductsToFavorites = () => {
-    dispatch(saveItem({ name: product.name, price: product.price, qty: 1 }));
+    dispatch(saveItem({ ...product }));
     dispatch(saveBookmarksToStorage());
     toast.success(`Product added to favorites!`, {
       position: "bottom-right",

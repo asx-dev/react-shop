@@ -2,7 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 const Slider = () => {
   return (
-    <>
+    <section id="slider">
       <Carousel className="mb-3">
         <Carousel.Item>
           <Image
@@ -27,7 +27,7 @@ const Slider = () => {
           />
         </Carousel.Item>
       </Carousel>
-    </>
+    </section>
   );
 };
 

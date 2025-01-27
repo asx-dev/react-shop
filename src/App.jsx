@@ -1,5 +1,5 @@
 import Homepage from "./pages/Homepage";
-import Favorites from "./pages/Favorites";
+import Bookmarks from "./pages/Bookmarks";
 import MainLayout from "../src/layouts/MainLayout";
 import "./styles.css";
 import {
@@ -15,7 +15,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Homepage />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
       </Route>
     )
   );

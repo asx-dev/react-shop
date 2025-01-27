@@ -28,16 +28,12 @@ const Products = () => {
 
   return (
     <>
-      <h2 className="text-center text-lg-start mb-2" id="categories">
-        Categories
-      </h2>
+      <h2 className="text-center text-lg-start mb-2">Categories</h2>
       <Categories
         originalProducts={productList}
         onFilterChange={setFilteredItems}
       />
-      <h2 className="text-center text-lg-start mb-2" id="products">
-        Products
-      </h2>
+      <h2 className="text-center text-lg-start mb-2">Products</h2>
       <Row className="row-gap-3">
         {currentItems.map((product) => {
           return <ProductCard key={product.id} product={product} />;
