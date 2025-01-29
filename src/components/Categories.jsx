@@ -3,12 +3,10 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 const Categories = ({ originalProducts, onFilterChange }) => {
   const categories = [
-    { name: "All", id: 1 },
-    { name: "Technology", id: 2 },
-    { name: "Cars", id: 3 },
-    { name: "Audio", id: 4 },
-    { name: "Music", id: 5 },
-    { name: "Games", id: 6 },
+    { name: "Playstation", logo: "playstation.svg" },
+    { name: "Xbox", logo: "xbox.svg" },
+    { name: "Windows", logo: "windows.svg" },
+    { name: "Steam", logo: "steam.svg" },
   ];
 
   const handleCategory = (category) => {
@@ -24,23 +22,20 @@ const Categories = ({ originalProducts, onFilterChange }) => {
 
   return (
     <section className="section" id="categories">
-      <h2 className="text-center text-lg-start mb-2">Categories</h2>
+      <h2 className="text-center mb-4">Categories</h2>
       <Row>
         {categories.map((category) => {
           return (
             <Col
-              xs={4}
-              sm={3}
-              md={2}
-              lg={2}
+              xs={6}
+              sm={6}
+              md={6}
+              lg={3}
               key={category.id}
               onClick={() => handleCategory(category.name)}
+              className="d-flex flex-column align-items-center gap-2"
             >
-              <Image
-                src="https://picsum.photos/300/300"
-                roundedCircle
-                className="product-image"
-              />
+              <Image src={category.logo} className="category__logo" />
               <h5 className="text-center">{category.name}</h5>
             </Col>
           );

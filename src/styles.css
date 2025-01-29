@@ -31,3 +31,7 @@
 .section {
   padding-top: 3rem;
 }
+
+.category__logo {
+  width: 60px;
+}
