@@ -3,12 +3,17 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-.product-image-container {
+.slider__img {
+  height: 500px;
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .product-image {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .call-to-action-container {
@@ -33,5 +38,10 @@
 }
 
 .category__logo {
-  width: 60px;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.category__button {
+  cursor: pointer;
 }

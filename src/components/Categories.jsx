@@ -23,17 +23,17 @@ const Categories = ({ originalProducts, onFilterChange }) => {
   return (
     <section className="section" id="categories">
       <h2 className="text-center mb-4">Categories</h2>
-      <Row>
+      <Row className="g-2">
         {categories.map((category) => {
           return (
             <Col
               xs={6}
               sm={6}
-              md={6}
+              md={3}
               lg={3}
-              key={category.id}
+              key={category.name}
               onClick={() => handleCategory(category.name)}
-              className="d-flex flex-column align-items-center gap-2"
+              className="d-flex flex-column align-items-center gap-2 category__button"
             >
               <Image src={category.logo} className="category__logo" />
               <h5 className="text-center">{category.name}</h5>

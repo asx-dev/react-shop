@@ -5,43 +5,26 @@ const Slider = () => {
     <section id="slider">
       <Carousel>
         <Carousel.Item>
-          <div className="video__wrapper">
-            <Image
-              src="https://wallpapers.com/images/featured/dead-space-4k-llgpz7imy78r284d.jpg"
-              alt=""
-              style={{
-                height: "500px",
-                width: "100%",
-                objectFit: "cover",
-                objectPosition: "top",
-              }}
-            />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
           <Image
-            src="https://pbs.twimg.com/media/EdiF-I4UEAAkbaj.jpg:large"
+            src="https://wallpapercave.com/wp/wp8830740.jpg"
             alt=""
-            style={{
-              height: "500px",
-              width: "100%",
-              objectFit: "cover",
-              objectPosition: "top",
-            }}
+            className="slider__img"
           />
         </Carousel.Item>
 
         <Carousel.Item>
           <Image
-            src="https://zelda.nintendo.com/breath-of-the-wild/assets/media/wallpapers/desktop-1.jpg"
+            src="https://blog.playstation.com/tachyon/2022/01/5a1b94ee8548fa3391124c09f9eab6dc6838b8ef.jpg"
             alt=""
-            style={{
-              height: "500px",
-              width: "100%",
-              objectFit: "cover",
-              objectPosition: "top",
-            }}
+            className="slider__img"
+          />
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            src="https://cdn.fastly.steamstatic.com/store/home/store_home_share.jpg"
+            alt=""
+            className="slider__img"
           />
         </Carousel.Item>
       </Carousel>
