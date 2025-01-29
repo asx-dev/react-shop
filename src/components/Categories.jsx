@@ -23,27 +23,30 @@ const Categories = ({ originalProducts, onFilterChange }) => {
   };
 
   return (
-    <Row>
-      {categories.map((category) => {
-        return (
-          <Col
-            xs={4}
-            sm={3}
-            md={2}
-            lg={2}
-            key={category.id}
-            onClick={() => handleCategory(category.name)}
-          >
-            <Image
-              src="https://picsum.photos/300/300"
-              roundedCircle
-              className="product-image"
-            />
-            <h5 className="text-center">{category.name}</h5>
-          </Col>
-        );
-      })}
-    </Row>
+    <section className="section" id="categories">
+      <h2 className="text-center text-lg-start mb-2">Categories</h2>
+      <Row>
+        {categories.map((category) => {
+          return (
+            <Col
+              xs={4}
+              sm={3}
+              md={2}
+              lg={2}
+              key={category.id}
+              onClick={() => handleCategory(category.name)}
+            >
+              <Image
+                src="https://picsum.photos/300/300"
+                roundedCircle
+                className="product-image"
+              />
+              <h5 className="text-center">{category.name}</h5>
+            </Col>
+          );
+        })}
+      </Row>
+    </section>
   );
 };
 

@@ -3,27 +3,45 @@ import Image from "react-bootstrap/Image";
 const Slider = () => {
   return (
     <section id="slider">
-      <Carousel className="mb-3">
+      <Carousel>
         <Carousel.Item>
-          <Image
-            src="https://images.unsplash.com/photo-1615494937387-40ae92370e2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
-          />
+          <div className="video__wrapper">
+            <Image
+              src="https://wallpapers.com/images/featured/dead-space-4k-llgpz7imy78r284d.jpg"
+              alt=""
+              style={{
+                height: "500px",
+                width: "100%",
+                objectFit: "cover",
+                objectPosition: "top",
+              }}
+            />
+          </div>
         </Carousel.Item>
+
         <Carousel.Item>
           <Image
-            src="https://images.unsplash.com/photo-1615494937387-40ae92370e2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://pbs.twimg.com/media/EdiF-I4UEAAkbaj.jpg:large"
             alt=""
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
+            style={{
+              height: "500px",
+              width: "100%",
+              objectFit: "cover",
+              objectPosition: "top",
+            }}
           />
         </Carousel.Item>
 
         <Carousel.Item>
           <Image
-            src="https://images.unsplash.com/photo-1615494937387-40ae92370e2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://zelda.nintendo.com/breath-of-the-wild/assets/media/wallpapers/desktop-1.jpg"
             alt=""
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
+            style={{
+              height: "500px",
+              width: "100%",
+              objectFit: "cover",
+              objectPosition: "top",
+            }}
           />
         </Carousel.Item>
       </Carousel>
