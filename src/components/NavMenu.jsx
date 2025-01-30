@@ -8,7 +8,7 @@ import { useState } from "react";
 function NavMenu() {
   const dispatch = useDispatch();
   const [scrollY, setScrollY] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(1200);
 
   window.addEventListener("scroll", () => {
     setScrollY(window.scrollY);
