@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+html,
+body {
+  font-family: "Poppins", "sans-serif";
+}
 .navbar-custom {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(3rem);
+  -webkit-backdrop-filter: blur(3rem);
 }
 
 .slider__img {
@@ -44,4 +49,16 @@
 
 .category__button {
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .slider__img {
+    height: 100vh;
+  }
+}
+
+.footer__socials {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: white;
 }

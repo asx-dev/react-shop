@@ -10,7 +10,15 @@ export const savedItemsSlice = createSlice({
   initialState,
   reducers: {
     saveItem: (state, action) => {
+      if (state.value.some((item) => item.name === action.payload.name)) {
+        return;
+      }
       state.value = [...state.value, action.payload];
+    },
+    removeItem: (state, action) => {
+      state.value = state.value.filter(
+        (item) => item.name !== action.payload.name
+      );
     },
     saveBookmarksToStorage: (state) => {
       localStorage.setItem("bookmarks", JSON.stringify(state.value));
@@ -18,5 +26,6 @@ export const savedItemsSlice = createSlice({
   },
 });
 
-export const { saveItem, saveBookmarksToStorage } = savedItemsSlice.actions;
+export const { saveItem, removeItem, saveBookmarksToStorage } =
+  savedItemsSlice.actions;
 export default savedItemsSlice.reducer;

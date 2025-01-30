@@ -8,19 +8,24 @@ import { useState } from "react";
 function NavMenu() {
   const dispatch = useDispatch();
   const [scrollY, setScrollY] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   window.addEventListener("scroll", () => {
     setScrollY(window.scrollY);
+  });
+
+  window.addEventListener("resize", () => {
+    setWindowWidth(window.innerWidth);
   });
 
   return (
     <Navbar
       expand="lg"
       fixed="top"
-      className={scrollY > 50 ? "navbar-custom" : ""}
+      className={scrollY > 50 || windowWidth < 1000 ? "navbar-custom" : ""}
     >
       <Container>
-        <Navbar.Brand>Ecommerce</Navbar.Brand>
+        <Navbar.Brand>🎮 JoystickJungle</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

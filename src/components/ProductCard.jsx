@@ -5,13 +5,17 @@ import { useDispatch } from "react-redux";
 import { addToCart, saveCartToStorage } from "../features/cart/cartSlice";
 import {
   saveItem,
+  removeItem,
   saveBookmarksToStorage,
 } from "../features/bookmarks/bookmarksSlice";
 import { toast } from "react-toastify";
 import Image from "react-bootstrap/Image";
+import { useLocation } from "react-router";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
+  const location = useLocation();
+  const isBookmarked = location.pathname === "/bookmarks";
 
   const addProductToCart = () => {
     dispatch(addToCart({ name: product.name, price: product.price, qty: 1 }));
@@ -26,7 +30,17 @@ const ProductCard = ({ product }) => {
   const addProductsToFavorites = () => {
     dispatch(saveItem({ ...product }));
     dispatch(saveBookmarksToStorage());
-    toast.success(`Product added to favorites!`, {
+    toast.info(`Product added to favorites!`, {
+      position: "bottom-right",
+      theme: "dark",
+      autoClose: 3000,
+    });
+  };
+
+  const removeProductsFromFavorites = () => {
+    dispatch(removeItem({ ...product }));
+    dispatch(saveBookmarksToStorage());
+    toast.warning(`Product removed from favorites!`, {
       position: "bottom-right",
       theme: "dark",
       autoClose: 3000,
@@ -52,7 +66,11 @@ const ProductCard = ({ product }) => {
           <Button
             variant="outline-danger"
             className="d-flex align-items-center gap-1 position-absolute bottom-0 start-0 m-1"
-            onClick={addProductsToFavorites}
+            onClick={
+              isBookmarked
+                ? removeProductsFromFavorites
+                : addProductsToFavorites
+            }
           >
             <BsFillHeartFill />
           </Button>

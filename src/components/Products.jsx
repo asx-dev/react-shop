@@ -35,6 +35,9 @@ const Products = () => {
       <section className="section" id="products">
         <h2 className="text-center text-lg-start mb-4">Products</h2>
         <Row className="g-3 mb-3">
+          {currentItems.length === 0 && (
+            <h3 className="text-center">😥 No products found</h3>
+          )}
           {currentItems.map((product) => {
             return <ProductCard key={product.id} product={product} />;
           })}

@@ -33,7 +33,7 @@ const Cart = () => {
           return (
             <div
               key={item.name}
-              className="shadow-sm p-3 d-flex justify-content-between align-items-center rounded mb-1"
+              className="p-3 d-flex justify-content-between align-items-center rounded mb-1"
             >
               <div className="d-dlex flex-row gap-1">
                 <strong>{item.name}</strong>

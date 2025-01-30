@@ -3,6 +3,8 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 const Categories = ({ originalProducts, onFilterChange }) => {
   const categories = [
+    { name: "All", logo: "unreal.svg" },
+    { name: "PC", logo: "unity.svg" },
     { name: "Playstation", logo: "playstation.svg" },
     { name: "Xbox", logo: "xbox.svg" },
     { name: "Windows", logo: "windows.svg" },
@@ -28,9 +30,9 @@ const Categories = ({ originalProducts, onFilterChange }) => {
           return (
             <Col
               xs={6}
-              sm={6}
+              sm={3}
               md={3}
-              lg={3}
+              lg={2}
               key={category.name}
               onClick={() => handleCategory(category.name)}
               className="d-flex flex-column align-items-center gap-2 category__button"
