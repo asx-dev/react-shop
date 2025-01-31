@@ -16,6 +16,30 @@ const Cart = () => {
     dispatch(saveCartToStorage());
   };
 
+  const checkoutHandler = async () => {
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SHOP_API}/checkout`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ items: cart.value }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to create checkout session");
+      }
+
+      const data = await response.json();
+      window.location.assign(data.url);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <Offcanvas
       show={cart.isOpen}
@@ -49,6 +73,13 @@ const Cart = () => {
             </div>
           );
         })}
+        {cart.value.length > 0 && (
+          <div className="d-grid">
+            <Button variant="success" onClick={checkoutHandler}>
+              Checkout
+            </Button>
+          </div>
+        )}
       </Offcanvas.Body>
     </Offcanvas>
   );

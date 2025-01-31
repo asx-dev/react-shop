@@ -7,8 +7,7 @@ import Categories from "../components/Categories";
 import PaginationTabs from "../components/PaginationTabs";
 import { useState, useEffect } from "react";
 const Products = () => {
-  const API_URL = "http://localhost:3000/products";
-  const { data, isLoading } = useFetch(API_URL);
+  const { data, isLoading } = useFetch(import.meta.env.VITE_SHOP_API);
   const [productList, setProductList] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);

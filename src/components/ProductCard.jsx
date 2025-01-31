@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
   const isBookmarked = location.pathname === "/bookmarks";
 
   const addProductToCart = () => {
-    dispatch(addToCart({ name: product.name, price: product.price, qty: 1 }));
+    dispatch(addToCart({ ...product, qty: 1 }));
     dispatch(saveCartToStorage());
     toast.success(`Product added to cart!`, {
       position: "bottom-right",
