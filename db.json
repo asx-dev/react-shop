@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "EA Sports FC 2025",
-      "price": 60.0,
+      "price": 60.00,
       "image": "https://products.eneba.games/resized-products/_BqWb0WeA03ActmZCrpxVoNKgy8PiJLluFjv456Ts4E_350x200_2x-0.jpg",
       "inStock": true,
       "category": "Xbox"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "Alan Wake 2",
-      "price": 99.99,
+      "price": 20.00,
       "image": "https://products.eneba.games/resized-products/mJhJs3BCgiAFzibBeEpgS6hkio5LtmlYytQjY6HVgsU_350x200_2x-0.jpg",
       "inStock": true,
       "category": "Playstation"
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "name": "Stardfield",
+      "name": "Starfield",
       "price": 99.99,
       "image": "https://products.eneba.games/resized-products/TKEL6brf0oURS51-k1qiJT1zkQTwf4vYJdLIVZsRuxY_350x200_2x-0.jpg",
       "inStock": true,
